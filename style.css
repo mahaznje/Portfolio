@@ -612,8 +612,8 @@ footer p {
         justify-content: start;
     }
     .section__pic-container {
-        height: 250px;
-        width: 250px;
+        height: 300px;
+        width: 300px;
     }
     .section__text {
         width: 90%;
@@ -640,8 +640,8 @@ footer p {
         margin-top: 6rem;
     }
     .expanded-desk.expanded {
-        width: 70vw;
-        height: 60vh;
+        width: 90vw;
+        height: 90vh;
     }
 }
 
@@ -649,15 +649,14 @@ footer p {
     section {
         margin: 0.5rem;
     }
+    .container-project-detail {
+        padding: 0.5rem;
+    }
     .projet-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
     .section__text {
-        width: 200px;
-    }
-    .section__pic-container {
-        height: 200px;
-        width: 200px;
+        width: auto;
     }
     #profile {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
