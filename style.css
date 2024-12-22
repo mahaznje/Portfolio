@@ -647,7 +647,7 @@ footer p {
 
 @media screen and (max-width: 400px) {
     section {
-        margin: 0rem;
+        margin: 0.5rem;
     }
     .projet-container {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
