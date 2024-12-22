@@ -64,10 +64,9 @@ document.querySelectorAll('.live-demo-btn').forEach(button => {
     });
 });
 
-    });
-
 document.querySelectorAll('.close-btn').forEach(button => {
     button.addEventListener('click', function() {
         const projetDemo = this.closest('.expanded-desk');
         closeDemo(projetDemo);
     });
+});
