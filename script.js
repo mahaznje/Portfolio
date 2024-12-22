@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
@@ -72,4 +71,3 @@ document.querySelectorAll('.close-btn').forEach(button => {
         const projetDemo = this.closest('.expanded-desk');
         closeDemo(projetDemo);
     });
-});
