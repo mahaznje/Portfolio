@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 function toggleMenu() {
     const menu = document.querySelector(".menu-links");
     const icon = document.querySelector(".hamburger-icon");
@@ -63,6 +64,8 @@ document.querySelectorAll('.live-demo-btn').forEach(button => {
         showDemo(projetDemo);
     });
 });
+
+    });
 
 document.querySelectorAll('.close-btn').forEach(button => {
     button.addEventListener('click', function() {
