@@ -1,408 +1,514 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Maha Znine Jemail </title>
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Maha Znine Jemail</title>
+    <link rel="stylesheet" href="style.css" />
 
     <!--boxin-icon-link-->
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
     <!--remix-icon-link-->
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <!--google font-icon-link-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-</head>
-
-<body>
+  <body>
     <header>
-        <nav id="desktop-nav">
-            <div class="logo"> Maha Znine Jemail </div>
-            <div>
-                <ul class="nav-links">
-                    <li> <a href="#about"> À propos </a></li>
-                    <li> <a href="#comp"> Compétences  </a></li>
-                    <li> <a href="#projet"> Projets </a></li>
-                    <li> <a href="#contact"> Contact </a></li>
-                </ul>
-            </div>
-        </nav>
-        <nav id="hamburger-nav">
-            <div class="logo"> Maha Znine Jemail </div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="menu-links">
-                    <li> <a href="#about" onclick="toggleMenu()"> À propos </a></li>
-                    <li> <a href="#comp" onclick="toggleMenu()"> Compétences </a></li>
-                    <li> <a href="#projet" onclick="toggleMenu()"> Projets </a></li>
-                    <li> <a href="#contact" onclick="toggleMenu()"> Contact </a></li>
-
-                </div>
-
-            </div>
-        </nav>
+      <nav id="desktop-nav">
+        <div class="logo">Maha Znine Jemail</div>
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about"> À propos </a></li>
+            <li><a href="#comp"> Compétences </a></li>
+            <li><a href="#projet"> Projets </a></li>
+            <li><a href="#contact"> Contact </a></li>
+          </ul>
+        </div>
+      </nav>
+      <nav id="hamburger-nav">
+        <div class="logo">Maha Znine Jemail</div>
+        <div class="hamburger-menu">
+          <div class="hamburger-icon" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="menu-links">
+            <li><a href="#about" onclick="toggleMenu()"> À propos </a></li>
+            <li><a href="#comp" onclick="toggleMenu()"> Compétences </a></li>
+            <li><a href="#projet" onclick="toggleMenu()"> Projets </a></li>
+            <li><a href="#contact" onclick="toggleMenu()"> Contact </a></li>
+          </div>
+        </div>
+      </nav>
     </header>
     <main>
-        <section id="profile" class="pop-out-element">
-            <div class="section__pic-container ">
-                <img src="assets/photo.png" alt="Maha Znine Jemail photo">
+      <section id="profile" class="pop-out-element">
+        <div class="section__pic-container">
+          <img src="assets/photo.png" alt="Maha Znine Jemail photo" />
+        </div>
+        <div class="section__text">
+          <p class="section__text__p1">Bienvenue sur mon portfolio!</p>
+          <p class="section__text__p2">je suis</p>
+
+          <h1 class="title">Maha Znine Jemail</h1>
+
+          <p class="section__text__p2">Développeuse Full Stack Junior</p>
+          <div class="btn-container">
+            <a class="btn btn-color-1" href="assets/cv.pdf">
+              Télécharger mon CV
+            </a>
+            <a class="btn btn-color-2" href="#contact"> Contact Info </a>
+          </div>
+          <div id="socials-container">
+            <i
+              class="bx bxl-linkedin-square"
+              onclick="location.href='https://www.linkedin.com/in/znine-maha-124157345/'"
+            ></i>
+            <i
+              class="bx bxl-github"
+              onclick="location.href='https://github.com/mahaznje'"
+            ></i>
+          </div>
+        </div>
+      </section>
+      <i class="bx bx-chevrons-down" id="arrow"></i>
+
+      <section id="about" class="pop-out-element">
+        <p class="section__text__p2">À propos de moi</p>
+        <h1 class="title">À propos</h1>
+        <div class="section-about">
+          <div class="about-countainers">
+            <div class="details-container">
+              <div id="socials-container">
+                <i class="bx bx-female"></i>
+                <h1 class="title">À propos de moi</h1>
+              </div>
+              <p class="section__text__p3">
+                Je suis <strong> Maha Znine Jemail</strong>, une
+                <strong> développeuse Full Stack Junior </strong>
+              </p>
+              <p class="section__text__p3">
+                J'ai 27 ans et je suis originaire de Tunis, Tunisie.
+              </p>
+              <p class="section__text__p3">
+                Actuellement, je cherche à mettre en pratique mes compétences
+                dans un environnement dynamique.
+              </p>
             </div>
-            <div class="section__text ">
-                <p class="section__text__p1"> Bienvenue sur mon portfolio!</p>
-                <p class="section__text__p2"> je suis </p>
-
-                <h1 class="title"> Maha Znine Jemail </h1>
-
-                <p class="section__text__p2"> Développeuse Full Stack Junior </p>
-                <div class="btn-container">
-                    <button class="btn btn-color-1" onclick="window.open('./assets/cv.pdf')">
-                        Télécharger mon CV
-                  </button>
-                    <a class="btn btn-color-2" href="#contact">
-                     Contact Info 
-                    </a>
-                </div>
-                <div id="socials-container">
-                    <i class='bx bxl-linkedin-square ' onclick="location.href='https://www.linkedin.com/in/znine-maha-124157345/'"></i>
-                    <i class='bx bxl-github ' onclick="location.href='https://github.com/mahaznje'"></i>
-                </div>
-
+            <div class="details-container">
+              <div id="socials-container">
+                <i class="bx bxs-group"></i>
+                <h1 class="title">Formation</h1>
+              </div>
+              <p class="section__text__p3">
+                <i class="bx bx-desktop" id="boxin"></i> formation de
+                Développeur web <i id="boxin" class="bx bx-map"></i>SKILL AND
+                YOU
+              </p>
+              <p class="section__text__p3">
+                <i class="bx bx-desktop" id="boxin"></i>Master ISIE
+                <i class="bx bx-map" id="boxin"></i> Tunisie
+              </p>
+              <p class="section__text__p3">
+                <i class="bx bx-desktop" id="boxin"></i> Licence Fondamentale IG
+                <i class="bx bx-map" id="boxin"></i>Tunisie
+              </p>
             </div>
+            <div class="details-container">
+              <div id="socials-container">
+                <i class="bx bx-objects-horizontal-left"></i>
+                <h1 class="title">Objectif</h1>
+              </div>
 
-        </section>
-        <i class='bx bx-chevrons-down' id="arrow"></i>
-
-        <section id="about" class="pop-out-element">
-            <p class="section__text__p2">À propos de moi</p>
-            <h1 class="title">À propos </h1>
-            <div class="section-container">
-                <div class="about-details-container">
-                    <div class="about-countainers">
-                        <div class="details-container">
-                            <div id="socials-container"> <i class='bx bx-female'></i>
-                                <h1 class="title"> À propos de moi</h1>
-                            </div>
-                            <p class="section__text__p3">Je suis <strong> Maha Znine Jemail</strong>, une <strong> développeuse Full Stack Junior </strong> </p>
-                            <p class="section__text__p3"> J'ai 27 ans et je suis originaire de Tunis, Tunisie.</p>
-                            <p class="section__text__p3"> Actuellement, je cherche à mettre en pratique mes compétences dans un environnement dynamique.</p>
-
-                        </div>
-                        <div class="details-container">
-                            <div id="socials-container">
-                                <i class='bx bxs-group'></i>
-                                <h1 class="title"> Formation</h1>
-                            </div>
-                            <p class="section__text__p3">
-                                <i class='bx bx-desktop' id="boxin"></i> formation de Développeur web <i id="boxin" class='bx bx-map'></i>SKILL AND YOU
-                            </p>
-                            <p class="section__text__p3"> <i class='bx bx-desktop' id="boxin"></i>Master ISIE <i class='bx bx-map' id="boxin"></i> Tunisie</p>
-                            <p class="section__text__p3"> <i class='bx bx-desktop' id="boxin"></i> Licence Fondamentale IG <i class='bx bx-map' id="boxin"></i>Tunisie</p>
-
-                        </div>
-                        <div class="details-container">
-                            <div id="socials-container">
-                                <i class='bx bx-objects-horizontal-left'></i>
-                                <h1 class="title"> Objectif</h1>
-                            </div>
-
-                            <p class="section__text__p3"> Mon objectif est de contribuer à des projets innovants en apportant des solutions web performantes. Je souhaite évoluer au sein d'une équipe dynamique où je peux apprendre et partager mes connaissances.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+              <p class="section__text__p3">
+                Mon objectif est de contribuer à des projets innovants en
+                apportant des solutions web performantes. Je souhaite évoluer au
+                sein d'une équipe dynamique où je peux apprendre et partager mes
+                connaissances.
+              </p>
             </div>
+          </div>
+        </div>
+      </section>
+      <i class="bx bx-chevrons-down" id="arrow"></i>
 
-
-        </section>
-        <i class='bx bx-chevrons-down' id="arrow"></i>
-
-        <section id="comp" class="pop-out-element">
-            <p class="section__text__p2">Compétences Techniques </p>
-            <h1 class="title"> Compétences </h1>
-            <div class="competence-detail-container">
-                <div class="competence-container">
-                    <div class="details-competence-container">
-                        <h2 class="competence-sub-title"> Front-End </h2>
-                        <div class="article-container">
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>HTML</h3>
-                                    <p>Avancé</p>
-                                </div>
-                            </article>
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>CSS3 </h3>
-                                    <p>Avancé</p>
-                                </div>
-                            </article>
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>VueJS </h3>
-                                    <p>Intermédiaire</p>
-                                </div>
-                            </article>
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>JavaScript</h3>
-                                    <p>Intermédiaire</p>
-                                </div>
-                            </article>
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>Wordress</h3>
-                                    <p>Intermédiaire</p>
-                                </div>
-                            </article>
-
-                        </div>
-                    </div>
-                    <div class="details-competence-container">
-                        <h2 class="competence-sub-title"> Back-End </h2>
-                        <div class="article-container">
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>PHP</h3>
-                                    <p>Avancé</p>
-                                </div>
-                            </article>
-
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>Git </h3>
-                                    <p>Intermédiaire</p>
-                                </div>
-                            </article>
-
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>Python</h3>
-                                    <p>Débutant</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="details-competence-container">
-                        <h2 class="competence-sub-title"> Data Base</h2>
-                        <div class="article-container">
-
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>MySQL </h3>
-                                    <p>Avancé</p>
-                                </div>
-                            </article>
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>Firebase </h3>
-                                    <p>Débutant</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-                    <div class="details-competence-container">
-                        <h2 class="competence-sub-title"> Méthodologies </h2>
-                        <div class="article-container">
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>Scrum </h3>
-                                    <p>Intermédiaire</p>
-                                </div>
-                            </article>
-                            <article>
-                                <i class='bx bx-badge-check'></i>
-                                <div>
-                                    <h3>MVC </h3>
-                                    <p>Intermédiaire</p>
-                                </div>
-                            </article>
-
-                        </div>
-                    </div>
-
-                </div>
-
+      <section id="comp" class="pop-out-element">
+        <p class="section__text__p2">Compétences Techniques</p>
+        <h1 class="title">Compétences</h1>
+        <div class="competence-detail-container">
+          <div class="competence-container">
+            <div class="details-competence-container">
+              <h2 class="competence-sub-title">Front-End</h2>
+              <div class="article-container">
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>HTML</h3>
+                    <p>Avancé</p>
+                  </div>
+                </article>
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>CSS3</h3>
+                    <p>Avancé</p>
+                  </div>
+                </article>
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>VueJS</h3>
+                    <p>Intermédiaire</p>
+                  </div>
+                </article>
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>JavaScript</h3>
+                    <p>Intermédiaire</p>
+                  </div>
+                </article>
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>Wordress</h3>
+                    <p>Intermédiaire</p>
+                  </div>
+                </article>
+              </div>
             </div>
+            <div class="details-competence-container">
+              <h2 class="competence-sub-title">Back-End</h2>
+              <div class="article-container">
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>PHP</h3>
+                    <p>Avancé</p>
+                  </div>
+                </article>
 
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>Git</h3>
+                    <p>Intermédiaire</p>
+                  </div>
+                </article>
 
-        </section>
-        <i class='bx bx-chevrons-down' id="arrow"></i>
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>Python</h3>
+                    <p>Débutant</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-competence-container">
+              <h2 class="competence-sub-title">Data Base</h2>
+              <div class="article-container">
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>MySQL</h3>
+                    <p>Avancé</p>
+                  </div>
+                </article>
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>Firebase</h3>
+                    <p>Débutant</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="details-competence-container">
+              <h2 class="competence-sub-title">Méthodologies</h2>
+              <div class="article-container">
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>Scrum</h3>
+                    <p>Intermédiaire</p>
+                  </div>
+                </article>
+                <article>
+                  <i class="bx bx-badge-check"></i>
+                  <div>
+                    <h3>MVC</h3>
+                    <p>Intermédiaire</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <i class="bx bx-chevrons-down" id="arrow"></i>
 
-        <section id="projet" class="pop-out-element">
-            <p class="section__text__p2"> Projets Réalisés</p>
-            <h1 class="title">Projets </h1>
-            <div class="projet-container">
-                <div class="container-project-detail ">
-                    <div class="projet-demo">
-                        <img id="desk" src="assets/laptop.png" alt="desktop">
-                        <img id="demo" src="assets/login.PNG" alt="projet1">
+      <section id="projet" class="pop-out-element">
+        <p class="section__text__p2">Projets Réalisés</p>
+        <h1 class="title">Projets</h1>
+        <div class="projet-container">
+          <div class="container-project-detail">
+            <div class="projet-demo">
+              <img id="desk" src="assets/laptop.png" alt="desktop" />
+              <img id="demo" src="assets/login.PNG" alt="projet1" />
 
-                        <div class="expanded-desk" style="display:none;">
-                            <span class="close-btn">&times;</span>
-                            <img class="expanded-desk-image" src="assets/laptop.png" alt="desktop">
-                            <video class="expanded-demo-video" style="display: none;">
-                                <source src="assets/dev2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-
-                    <div class="p-detail">
-                        <div class="projet-text">
-                            <div class="p-text">
-                                <h4>Dinvoice</h4>
-                                <p class="section__text__p3">Ce projet de fin des études consiste à réaliser une application web pour la gestion des factures et gestion des dépenses, les paiements et à créer des estimations professionnelles. Ce projet n'est pas open source <strong>la licence est réservée à l'entreprise.</strong></p>
-                            </div>
-                            <div class="p-text">
-                                <h5>Technologies Utilisées</h5>
-                                <p class="section__text__p3">Laravel, Vue.js, MySQL, HTML, CSS3</p>
-                            </div>
-                        </div>
-                        <div class="btn-container">
-                            <button class="btn btn-color-1" onclick="window.open('./assets/rapportfinal.pdf')">Rapport</button>
-                            <button class="btn btn-color-2 live-demo-btn">Live DEMO</button>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="container-project-detail ">
-                    <div class="projet-demo">
-                        <img id="desk" src="assets/laptop.png" alt="desktop">
-                        <img id="demo" src="assets/match.png" alt="projet1">
-                        <div class="expanded-desk" style="display:none;">
-                            <span class="close-btn">&times;</span>
-                            <img class="expanded-desk-image" src="assets/laptop.png" alt="desktop">
-                            <video class="expanded-demo-video" style="display: none;">
-                                <source src="assets/matcha.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-
-                    <div class="p-detail">
-                        <div class="projet-text">
-                            <div class="p-text">
-                                <h4> Match Your Coffee</h4>
-
-                                <p class="section__text__p3">Création d'une plateforme spécialisée dans la vente de thé et café. Système de gestion des commandes optimisé et design attrayant.</p>
-                            </div>
-                            <div class="p-text">
-                                <h5>Technologies Utilisées</h5>
-                                <p class="section__text__p3">
-                                    HTML5, CSS3, JavaScript,PHP, MySQL
-                                </p>
-                            </div>
-                        </div>
-                        <div class="btn-container">
-                            <i class='bx bxl-github' onclick="location.href='https://github.com/mahaznje/matchyourcoffee.git'"></i>
-                            <button class="btn btn-color-2 live-demo-btn" id="live-demo-btn">Live DEMO</button>
-
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <div class="container-project-detail">
-                    <div class="projet-demo">
-                        <img id="desk" src="assets/laptop.png" alt="desktop">
-                        <img id="demo" src="assets/timeless.png" alt="projet1">
-
-                        <div class="expanded-desk" style="display:none;">
-                            <span class="close-btn">&times;</span>
-                            <img class="expanded-desk-image" src="assets/laptop.png" alt="desktop">
-                            <video class="expanded-demo-video" style="display: none;">
-                                <source src="assets/timeless.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="p-detail">
-                        <div class="projet-text">
-                            <div class="p-text">
-                                <h4> Timeless Clothes</h4>
-
-                                <p class="section__text__p3">Développement d'une plateforme pour la vente de vêtements en ligne. Interface utilisateur responsive et intuitive</p>
-                            </div>
-                            <div class="p-text">
-                                <h5>Technologies Utilisées</h5>
-                                <p class="section__text__p3">
-                                    HTML5, CSS3, JavaScript,PHP, MySQL
-                                </p>
-                            </div>
-                        </div>
-                        <div class="btn-container">
-                            <i class='bx bxl-github' onclick="location.href='https://github.com/mahaznje/timeless_website.git'"></i>
-                            <button class="btn btn-color-2 live-demo-btn"> Live DEMO</button>
-
-                        </div>
-                    </div>
-
-
-
-                </div>
+              <div class="expanded-desk" style="display: none">
+                <span class="close-btn">&times;</span>
+                <img
+                  class="expanded-desk-image"
+                  src="assets/laptop.png"
+                  alt="desktop"
+                />
+                <video class="expanded-demo-video" style="display: none">
+                  <source src="assets/dev2.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
 
-
-        </section>
-        <i class='bx bx-chevrons-down' id="arrow"></i>
-
-        <section id="contact" class="pop-out-element">
-            <p class="section__text__p2"> N'hésitez pas à me contacter</p>
-            <h1 class="title">Me contacter </h1>
-            <div class="contact-container">
-                <div class="contact-info-conatiner">
-                    <i class="ri-mail-line"></i>
-                    <a href="mailto:maha.znine@gmail.com">Maha.znine@gmail.com</a>
-
+            <div class="p-detail">
+              <div class="projet-text">
+                <div class="p-text">
+                  <h4>Dinvoice</h4>
+                  <p class="section__text__p3">
+                    Ce projet de fin des études consiste à réaliser une
+                    application web pour la gestion des factures et gestion des
+                    dépenses, les paiements et à créer des estimations
+                    professionnelles. Ce projet n'est pas open source
+                    <strong>la licence est réservée à l'entreprise.</strong>
+                  </p>
                 </div>
-                <div class="contact-info-conatiner">
-                    <i class="ri-linkedin-box-line" onclick="location.href='https://www.linkedin.com/in/znine-maha-124157345/'"></i>
-                    <a href="https://www.linkedin.com/in/znine-maha-124157345/">Linkdin</a>
+                <div class="p-text">
+                  <h5>Technologies Utilisées</h5>
+                  <p class="section__text__p3">
+                    Laravel, Vue.js, MySQL, HTML, CSS3
+                  </p>
                 </div>
-                <div class="contact-info-conatiner">
-                    <i class="ri-phone-line"></i>
-                    <a href="#contact">+41 (0)76 585 09 95</a>
-                </div>
+              </div>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-1"
+                  onclick="window.open('./assets/rapportfinal.pdf')"
+                >
+                  Rapport
+                </button>
+                <button class="btn btn-color-2 live-demo-btn">Live DEMO</button>
+              </div>
+            </div>
+          </div>
 
+          <div class="container-project-detail">
+            <div class="projet-demo">
+              <img id="desk" src="assets/laptop.png" alt="desktop" />
+              <img id="demo" src="assets/match.png" alt="projet1" />
             </div>
 
-        </section>
+            <div class="p-detail">
+              <div class="projet-text">
+                <div class="p-text">
+                  <h4>Match Your Coffee</h4>
+
+                  <p class="section__text__p3">
+                    Création d'une plateforme spécialisée dans la vente de thé
+                    et café. Système de gestion des commandes optimisé et design
+                    attrayant.
+                  </p>
+                </div>
+                <div class="p-text">
+                  <h5>Technologies Utilisées</h5>
+                  <p class="section__text__p3">
+                    HTML5, CSS3, JavaScript,PHP, MySQL
+                  </p>
+                </div>
+              </div>
+              <div class="btn-container">
+                <i
+                  class="bx bxl-github"
+                  onclick="location.href='https://github.com/mahaznje/matchyourcoffee.git'"
+                ></i>
+                <button
+                  class="btn btn-color-2 live-demo-btn"
+                  onclick="location.herf='http://matchyourcoffee.wuaze.com/'"
+                  id="live-demo-btn"
+                >
+                  Live DEMO
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="container-project-detail">
+            <div class="projet-demo">
+              <img id="desk" src="assets/laptop.png" alt="desktop" />
+              <img id="demo" src="assets/timeless.png" alt="projet1" />
+            </div>
+            <div class="p-detail">
+              <div class="projet-text">
+                <div class="p-text">
+                  <h4>Timeless Clothes</h4>
+
+                  <p class="section__text__p3">
+                    Développement d'une plateforme pour la vente de vêtements en
+                    ligne. Interface utilisateur responsive et intuitive
+                  </p>
+                </div>
+                <div class="p-text">
+                  <h5>Technologies Utilisées</h5>
+                  <p class="section__text__p3">
+                    HTML5, CSS3, JavaScript,PHP, MySQL
+                  </p>
+                </div>
+              </div>
+              <div class="btn-container">
+                <i
+                  class="bx bxl-github"
+                  onclick="location.href='https://github.com/mahaznje/timeless_website.git'"
+                ></i>
+                <button
+                  onclick="location.href='http://timeless.wuaze.com/'"
+                  class="btn btn-color-2 live-demo-btn"
+                >
+                  Live DEMO
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="container-project-detail">
+            <div class="projet-demo">
+              <img id="desk" src="assets/laptop.png" alt="desktop" />
+              <img id="demo" src="assets/HomePizza.png" alt="projet1" />
+            </div>
+            <div class="p-detail">
+              <div class="projet-text">
+                <div class="p-text">
+                  <h4>Home pizza</h4>
+
+                  <p class="section__text__p3">
+                    Home Pizza est un site web moderne et interactif développé
+                    en HTML, CSS et JavaScript natif, conçu comme une vitrine
+                    culinaire passionnée qui célèbre l'art de la pizza. Cette
+                    plateforme front-end présente une expérience culinaire
+                    immersive autour des pizzas
+                  </p>
+                </div>
+                <div class="p-text">
+                  <h5>Technologies Utilisées</h5>
+                  <p class="section__text__p3">
+                    HTML5, CSS3 ,JavaScript natif, Bibliothèque Swiper
+                  </p>
+                </div>
+              </div>
+              <div class="btn-container">
+                <i
+                  class="bx bxl-github"
+                  onclick="location.href='https://github.com/mahaznje/HomePizza.git'"
+                ></i>
+                <button
+                  onclick="location.href='https://mahaznje.github.io/HomePizza/'"
+                  class="btn btn-color-2 live-demo-btn"
+                >
+                  Live DEMO
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="container-project-detail">
+            <div class="projet-demo">
+              <img id="desk" src="assets/laptop.png" alt="desktop" />
+              <img id="demo" src="assets/bakerypng.png" alt="projet1" />
+            </div>
+            <div class="p-detail">
+              <div class="projet-text">
+                <div class="p-text">
+                  <h4>Home pizza</h4>
+
+                  <p class="section__text__p3">
+                    Golden Bakery est un site web élégant et interactif créé
+                    avec HTML, CSS et JavaScript natif, conçu pour mettre en
+                    valeur l'art et la tradition de la boulangerie artisanale.
+                    Cette vitrine digitale offre une expérience sensorielle
+                    autour des produits de boulangerie, invitant les visiteurs à
+                    découvrir un monde de saveurs et d'arômes authentiques.
+                  </p>
+                </div>
+                <div class="p-text">
+                  <h5>Technologies Utilisées</h5>
+                  <p class="section__text__p3">HTML5, CSS3 ,JavaScript natif</p>
+                </div>
+              </div>
+              <div class="btn-container">
+                <i
+                  class="bx bxl-github"
+                  onclick="location.href='https://github.com/mahaznje/Bakery.git'"
+                ></i>
+                <button
+                  onclick="location.href='https://mahaznje.github.io/Bakery/'"
+                  class="btn btn-color-2 live-demo-btn"
+                >
+                  Live DEMO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <i class="bx bx-chevrons-down" id="arrow"></i>
+
+      <section id="contact" class="pop-out-element">
+        <p class="section__text__p2">N'hésitez pas à me contacter</p>
+        <h1 class="title">Me contacter</h1>
+        <div class="contact-container">
+          <div class="contact-info-conatiner">
+            <i class="ri-mail-line"></i>
+            <a href="mailto:maha.znine@gmail.com">Maha.znine@gmail.com</a>
+          </div>
+          <div class="contact-info-conatiner">
+            <i
+              class="ri-linkedin-box-line"
+              onclick="location.href='https://www.linkedin.com/in/znine-maha-124157345/'"
+            ></i>
+            <a href="https://www.linkedin.com/in/znine-maha-124157345/"
+              >Linkdin</a
+            >
+          </div>
+          <div class="contact-info-conatiner">
+            <i class="ri-phone-line"></i>
+            <a href="#contact">+41 (0)76 585 09 95</a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <nav class="nav-footer">
-            <div>
-                <ul class="nav-links">
-                    <li> <a href="#about"> À propos </a></li>
-                    <li> <a href="#comp"> Compétences  </a></li>
-                    <li> <a href="#projet"> Projets </a></li>
-                    <li> <a href="#contact"> Contact </a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &copy; 2024 Maha Znine Jemail. Tous droits réservés.</p>
-
+      <nav class="nav-footer">
+        <div>
+          <ul class="nav-links">
+            <li><a href="#about"> À propos </a></li>
+            <li><a href="#comp"> Compétences </a></li>
+            <li><a href="#projet"> Projets </a></li>
+            <li><a href="#contact"> Contact </a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &copy; 2024 Maha Znine Jemail. Tous droits réservés.</p>
     </footer>
-    <script src="script.js">
-    </script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
