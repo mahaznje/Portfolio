@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -347,6 +347,7 @@ i {
   gap: 1rem;
   margin-bottom: 7rem;
   margin-top: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
 .article-container {
@@ -363,8 +364,7 @@ article {
 /*projet*/
 
 .about-countainers,
-.projet-container,
-.competence-container {
+.projet-container {
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
 }
 
