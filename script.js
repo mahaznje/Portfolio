@@ -33,8 +33,14 @@ function showDemo(expandedDesk) {
   }
   const expandedDemoVideo = expandedDesk.querySelector(".expanded-demo-video");
 
+  const container = expandedDesk.closest(".container-project-detail");
+  const rect = container.getBoundingClientRect();
+
   expandedDesk.style.display = "flex";
   expandedDesk.classList.add("expanded");
+
+  expandedDesk.style.top = `${rect.top + rect.height + 50}px`;
+  expandedDesk.style.left = `${rect.width}px`;
 
   expandedDemoVideo.style.display = "block";
   expandedDemoVideo.play();
@@ -69,6 +75,7 @@ document.querySelectorAll(".close-btn").forEach((button) => {
     closeDemo(projetDemo);
   });
 });
+
 document.querySelectorAll(".live-demo-btn").forEach((button) => {
   button.addEventListener("click", function () {
     const projetDemo = this.closest(".container-project-detail").querySelector(
@@ -78,9 +85,20 @@ document.querySelectorAll(".live-demo-btn").forEach((button) => {
 
     if (window.innerWidth <= 768) {
       // Sur mobile, on n'affiche que la vidéo
-      projetDemo.style.display = "block";
       video.style.display = "block";
       video.play();
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.mozRequestFullScreen) {
+        // Firefox
+        video.mozRequestFullScreen();
+      } else if (video.webkitRequestFullscreen) {
+        // Chrome, Safari and Opera
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        // IE/Edge
+        video.msRequestFullscreen();
+      }
     } else {
       // Sur desktop, on garde le comportement actuel
       showDemo(projetDemo);
@@ -95,6 +113,6 @@ document.addEventListener("click", function (event) {
     event.target.classList.contains("expanded-demo-video")
   ) {
     event.target.pause();
-    event.target.closest(".expanded-desk").style.display = "none";
+    event.target.closest(".projet-demo").style.display = "none";
   }
 });

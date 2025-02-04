@@ -58,7 +58,7 @@
     <main>
       <section id="profile" class="pop-out-element">
         <div class="section__pic-container">
-          <img src="assets/photo.png" alt="Maha Znine Jemail photo" />
+          <img src="assets/maha.jpeg" alt="Maha Znine Jemail photo" />
         </div>
         <div class="section__text">
           <p class="section__text__p1">Bienvenue sur mon portfolio!</p>
@@ -90,56 +90,57 @@
       <section id="about" class="pop-out-element">
         <p class="section__text__p2">À propos de moi</p>
         <h1 class="title">À propos</h1>
-        <div class="section-about">
-          <div class="about-countainers">
-            <div class="details-container">
-              <div id="socials-container">
-                <i class="bx bx-female"></i>
-                <h1 class="title">À propos de moi</h1>
+        <div class="section-container">
+            <div class="about-countainers">
+              <div class="details-container">
+                <div id="socials-container">
+                  <i class="bx bx-female"></i>
+                  <h1 class="title">À propos de moi</h1>
+                </div>
+                <p class="section__text__p3">
+                  Je suis <strong> Maha Znine Jemail</strong>, une
+                  <strong> développeuse Full Stack Junior </strong>
+                </p>
+                <p class="section__text__p3">
+                  J'ai 27 ans et je suis originaire de Tunis, Tunisie.
+                </p>
+                <p class="section__text__p3">
+                  Actuellement, je cherche à mettre en pratique mes compétences
+                  dans un environnement dynamique.
+                </p>
               </div>
-              <p class="section__text__p3">
-                Je suis <strong> Maha Znine Jemail</strong>, une
-                <strong> développeuse Full Stack Junior </strong>
-              </p>
-              <p class="section__text__p3">
-                J'ai 27 ans et je suis originaire de Tunis, Tunisie.
-              </p>
-              <p class="section__text__p3">
-                Actuellement, je cherche à mettre en pratique mes compétences
-                dans un environnement dynamique.
-              </p>
-            </div>
-            <div class="details-container">
-              <div id="socials-container">
-                <i class="bx bxs-group"></i>
-                <h1 class="title">Formation</h1>
+              <div class="details-container">
+                <div id="socials-container">
+                  <i class="bx bxs-group"></i>
+                  <h1 class="title">Formation</h1>
+                </div>
+                <p class="section__text__p3">
+                  <i class="bx bx-desktop" id="boxin"></i> formation de
+                  Développeur web <i id="boxin" class="bx bx-map"></i>SKILL AND
+                  YOU
+                </p>
+                <p class="section__text__p3">
+                  <i class="bx bx-desktop" id="boxin"></i>Master ISIE
+                  <i class="bx bx-map" id="boxin"></i> Tunisie
+                </p>
+                <p class="section__text__p3">
+                  <i class="bx bx-desktop" id="boxin"></i> Licence Fondamentale
+                  IG <i class="bx bx-map" id="boxin"></i>Tunisie
+                </p>
               </div>
-              <p class="section__text__p3">
-                <i class="bx bx-desktop" id="boxin"></i> formation de
-                Développeur web <i id="boxin" class="bx bx-map"></i>SKILL AND
-                YOU
-              </p>
-              <p class="section__text__p3">
-                <i class="bx bx-desktop" id="boxin"></i>Master ISIE
-                <i class="bx bx-map" id="boxin"></i> Tunisie
-              </p>
-              <p class="section__text__p3">
-                <i class="bx bx-desktop" id="boxin"></i> Licence Fondamentale IG
-                <i class="bx bx-map" id="boxin"></i>Tunisie
-              </p>
-            </div>
-            <div class="details-container">
-              <div id="socials-container">
-                <i class="bx bx-objects-horizontal-left"></i>
-                <h1 class="title">Objectif</h1>
-              </div>
+              <div class="details-container">
+                <div id="socials-container">
+                  <i class="bx bx-objects-horizontal-left"></i>
+                  <h1 class="title">Objectif</h1>
+                </div>
 
-              <p class="section__text__p3">
-                Mon objectif est de contribuer à des projets innovants en
-                apportant des solutions web performantes. Je souhaite évoluer au
-                sein d'une équipe dynamique où je peux apprendre et partager mes
-                connaissances.
-              </p>
+                <p class="section__text__p3">
+                  Mon objectif est de contribuer à des projets innovants en
+                  apportant des solutions web performantes. Je souhaite évoluer
+                  au sein d'une équipe dynamique où je peux apprendre et
+                  partager mes connaissances.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -319,6 +320,17 @@
             <div class="projet-demo">
               <img id="desk" src="assets/laptop.png" alt="desktop" />
               <img id="demo" src="assets/match.png" alt="projet1" />
+               <div class="expanded-desk" style="display: none">
+                <span class="close-btn">&times;</span>
+                <img
+                  class="expanded-desk-image"
+                  src="assets/laptop.png"
+                  alt="desktop"
+                />
+                <video class="expanded-demo-video" style="display: none">
+                  <source src="assets/matcha.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
 
             <div class="p-detail">
@@ -344,13 +356,8 @@
                   class="bx bxl-github"
                   onclick="location.href='https://github.com/mahaznje/matchyourcoffee.git'"
                 ></i>
-                <button
-                  class="btn btn-color-2 live-demo-btn"
-                  onclick="location.herf='http://matchyourcoffee.wuaze.com/'"
-                  id="live-demo-btn"
-                >
-                  Live DEMO
-                </button>
+                             <button class="btn btn-color-2 live-demo-btn">Live DEMO</button>
+
               </div>
             </div>
           </div>
@@ -401,9 +408,8 @@
                   <h4>Home pizza</h4>
 
                   <p class="section__text__p3">
-                    Home Pizza est un site web moderne et interactif développé
-                    en HTML, CSS et JavaScript natif, conçu comme une vitrine
-                    culinaire passionnée qui célèbre l'art de la pizza. Cette
+                    Site web moderne conçu comme une vitrine
+                    culinaire passionnée. Cette
                     plateforme front-end présente une expérience culinaire
                     immersive autour des pizzas
                   </p>
@@ -440,10 +446,7 @@
                   <h4>Home pizza</h4>
 
                   <p class="section__text__p3">
-                    Golden Bakery est un site web élégant et interactif créé
-                    avec HTML, CSS et JavaScript natif, conçu pour mettre en
-                    valeur l'art et la tradition de la boulangerie artisanale.
-                    Cette vitrine digitale offre une expérience sensorielle
+                    Site web vitrine offre une expérience sensorielle
                     autour des produits de boulangerie, invitant les visiteurs à
                     découvrir un monde de saveurs et d'arômes authentiques.
                   </p>
