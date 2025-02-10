@@ -2,9 +2,11 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Maha Znine Jemail</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Maha Znine Jemail</title>
+          <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
 
     <!--boxin-icon-link-->
     <link
@@ -85,6 +87,7 @@
           </div>
         </div>
       </section>
+      
       <i class="bx bx-chevrons-down" id="arrow"></i>
 
       <section id="about" class="pop-out-element">
@@ -264,10 +267,23 @@
       <i class="bx bx-chevrons-down" id="arrow"></i>
 
       <section id="projet" class="pop-out-element">
+
+
+
         <p class="section__text__p2">Projets Réalisés</p>
         <h1 class="title">Projets</h1>
-        <div class="projet-container">
-          <div class="container-project-detail">
+
+
+        <div class="projet__swiper swiper">
+
+
+        <div class="projet-container swiper-wrapper">
+
+
+          <div class="container-project-detail swiper-slide">
+
+
+
             <div class="projet-demo">
               <img id="desk" src="assets/laptop.png" alt="desktop" />
               <img id="demo" src="assets/login.PNG" alt="projet1" />
@@ -316,7 +332,7 @@
             </div>
           </div>
 
-          <div class="container-project-detail">
+          <div class="container-project-detail swiper-slide">
             <div class="projet-demo">
               <img id="desk" src="assets/laptop.png" alt="desktop" />
               <img id="demo" src="assets/match.png" alt="projet1" />
@@ -361,7 +377,7 @@
               </div>
             </div>
           </div>
-          <div class="container-project-detail">
+          <div class="container-project-detail swiper-slide">
             <div class="projet-demo">
               <img id="desk" src="assets/laptop.png" alt="desktop" />
               <img id="demo" src="assets/timeless.png" alt="projet1" />
@@ -397,7 +413,7 @@
               </div>
             </div>
           </div>
-          <div class="container-project-detail">
+          <div class="container-project-detail swiper-slide">
             <div class="projet-demo">
               <img id="desk" src="assets/laptop.png" alt="desktop" />
               <img id="demo" src="assets/HomePizza.png" alt="projet1" />
@@ -435,7 +451,7 @@
               </div>
             </div>
           </div>
-          <div class="container-project-detail">
+          <div class="container-project-detail swiper-slide">
             <div class="projet-demo">
               <img id="desk" src="assets/laptop.png" alt="desktop" />
               <img id="demo" src="assets/bakerypng.png" alt="projet1" />
@@ -470,7 +486,13 @@
               </div>
             </div>
           </div>
+
         </div>
+         <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+        </div>
+
       </section>
       <i class="bx bx-chevrons-down" id="arrow"></i>
 
@@ -512,6 +534,9 @@
       </nav>
       <p>Copyright &copy; 2024 Maha Znine Jemail. Tous droits réservés.</p>
     </footer>
-    <script src="script.js"></script>
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
   </body>
 </html>

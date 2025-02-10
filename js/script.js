@@ -24,9 +24,10 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 });
-let currentOpenDemo = null;
 
 // Fonction pour afficher le projet agrandi
+let currentOpenDemo = null;
+
 function showDemo(expandedDesk) {
   if (currentOpenDemo && currentOpenDemo !== expandedDesk) {
     closeDemo(currentOpenDemo);
@@ -34,13 +35,10 @@ function showDemo(expandedDesk) {
   const expandedDemoVideo = expandedDesk.querySelector(".expanded-demo-video");
 
   const container = expandedDesk.closest(".container-project-detail");
-  const rect = container.getBoundingClientRect();
 
+  // Set display and add class
   expandedDesk.style.display = "flex";
   expandedDesk.classList.add("expanded");
-
-  expandedDesk.style.top = `${rect.top + rect.height + 50}px`;
-  expandedDesk.style.left = `${rect.width}px`;
 
   expandedDemoVideo.style.display = "block";
   expandedDemoVideo.play();
@@ -115,4 +113,17 @@ document.addEventListener("click", function (event) {
     event.target.pause();
     event.target.closest(".projet-demo").style.display = "none";
   }
+});
+
+//swiper
+// Swiper.js Configuration
+const swiperPopular = new Swiper(".projet__swiper", {
+  loop: true,
+  grabCursor: true,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 });

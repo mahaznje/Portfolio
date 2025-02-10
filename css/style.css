@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -180,9 +180,9 @@ a:hover {
 }
 
 section {
-  padding-top: 10vh;
+  padding-top: 3vh;
   height: auto;
-  margin: 2rem 4rem;
+  margin: 1rem 2rem;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -293,6 +293,9 @@ i {
 #about {
   position: relative;
 }
+.about-countainers {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 
 .about-countainers {
   display: grid;
@@ -300,11 +303,15 @@ i {
   margin-bottom: 1rem;
   margin-top: 1rem;
   justify-self: center;
+  justify-content: center;
 }
-
+.swiper-button-prev,
+.swiper-button-next {
+  color: #333;
+  justify-self: start;
+}
 .details-container,
-.details-competence-container,
-.container-project-detail {
+.details-competence-container {
   padding: 0.5rem 1rem;
   background: white;
   border-radius: 2rem;
@@ -320,7 +327,7 @@ i {
 
 .section__text__p3 {
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-bottom: 0.3rem;
 }
 
@@ -347,13 +354,18 @@ i {
   gap: 1rem;
   margin-bottom: 7rem;
   margin-top: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  justify-content: center;
+}
+.competence-container {
+  grid-template-columns: repeat(auto-fit, minmax(230px, auto));
 }
 
 .article-container {
   padding: 1rem;
 }
-
+.details-competence-container {
+  max-width: 220px;
+}
 article {
   display: flex;
   text-align: left;
@@ -362,59 +374,51 @@ article {
 }
 
 /*projet*/
-
-.about-countainers,
-.projet-container {
-  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+#projet {
+  grid-template-columns: 100%;
+  row-gap: 2rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+  justify-items: center;
 }
 
-.projet-container {
-  display: grid;
-  gap: 1rem;
-  margin-bottom: 1rem;
+.projet__swiper {
+  position: relative;
+  display: flex;
   margin-top: 1rem;
 }
 
-@keyframes expandedDeskPopOut {
-  0% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
+.container-project-detail {
+  max-width: 400px;
+  height: 600px;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 2rem;
+  text-align: center;
+  flex-shrink: 0;
+  transition: all 0.4s;
+  transform: scale(0.7);
 }
 
-@keyframes popIn {
-  0% {
-    transform: translate(-50%, -50%) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(-50%, -50%) scale(0.5);
-    opacity: 0;
-  }
+:is(.swiper-slide-active, .swiper-slide-duplicate-active) {
+  transform: scale(1);
 }
-
 .expanded-desk {
   display: none;
   position: absolute;
   background-color: rgba(121, 121, 121, 0.443);
   border-radius: 20px;
-  width: 70vw; /* Gardez la même largeur */
-  height: 90vh; /* Gardez la même hauteur */
-  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  width: 44vw;
+  height: 70vh;
+  z-index: 1000;
   justify-content: center;
   align-items: center;
 }
 
-.container-project-detail {
-  position: relative;
-}
 .expanded-desk.expanded {
   position: fixed;
-
   animation: expandedDeskPopOut 0.5s ease forwards;
 }
 
@@ -459,11 +463,10 @@ article {
 }
 #demo.fullscreen {
   position: fixed;
-  top: 0;
-  left: 0;
+
   width: 100%;
   height: 100%;
-  z-index: 9999;
+  z-index: 1000000;
 }
 #desk {
   width: 100%;
@@ -498,7 +501,27 @@ article {
   margin: 0;
   gap: 1rem;
 }
+@keyframes expandedDeskPopOut {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
 
+@keyframes popIn {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+}
 h4,
 h5 {
   border-bottom: 2px solid #333;
@@ -507,7 +530,7 @@ h5 {
 }
 
 .p-text {
-  padding: 2px 5px;
+  padding: 2px 3px;
   justify-items: center;
 }
 
@@ -551,23 +574,15 @@ footer p {
 
 @media screen and (max-width: 400px) {
   section {
-    margin: 0rem 0.1rem;
+    margin: 3rem 0.5rem;
   }
-  .container-project-detail {
-    padding: 0.1rem;
-  }
-  .projet-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
+
   .section__text {
     width: auto;
   }
-  #profile {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    justify-content: start;
-  }
+
   .details-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     padding: 0.1rem;
   }
   .p-detail {
@@ -577,9 +592,25 @@ footer p {
   .projet-text {
     padding: 1px;
   }
+  .projet-container {
+    align-items: center;
+    margin-inline: auto;
+    width: 350px;
+  }
+  .swiper {
+    width: 350px;
+  }
+  .container-project-detail {
+    max-width: 260px;
+    margin-left: 0rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  #profile {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
   #arrow {
     display: none;
   }
@@ -594,21 +625,20 @@ footer p {
     font-size: 1.2rem;
   }
   .section__text__p3 {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
   #contact {
-    margin: 1rem auto;
-    padding: 1rem;
+    margin: 0.3rem auto;
+    padding: 0.3rem;
+    padding-bottom: 4rem;
   }
+
   .contact-container {
     justify-content: start;
-    padding: 1rem;
+    padding: 0.5rem;
     flex-direction: column;
   }
-  #profile {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: start;
-  }
+
   .section__pic-container {
     height: 300px;
     width: 300px;
@@ -616,17 +646,7 @@ footer p {
   .section__text {
     width: 90%;
   }
-  .projet-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
-  .projet-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    padding: 0.3rem;
-    margin: 0;
-    gap: 1rem;
-  }
+
   .article-container {
     padding: 1px;
   }
@@ -638,11 +658,7 @@ footer p {
     width: 80%;
   }
   footer {
-    margin-top: 6rem;
-  }
-  .expanded-desk.expanded {
-    width: 90vw;
-    height: 90vh;
+    margin-top: 3rem;
   }
 }
 
@@ -652,8 +668,12 @@ footer p {
     text-align: center;
     margin-bottom: 6rem;
   }
-}
 
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 1px;
+  }
+}
 @media screen and (max-width: 1200px) {
   #desktop-nav {
     display: none;
@@ -663,9 +683,8 @@ footer p {
     right: 0;
     gap: 1rem;
   }
-  .container-project-detail:last-child {
-    grid-column: 1 / -1;
-    justify-self: center;
-    max-width: 500px;
+  .contact-container {
+    margin: 0.8rem auto;
+    padding: 1rem 2rem;
   }
 }
