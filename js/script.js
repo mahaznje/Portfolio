@@ -127,14 +127,3 @@ const swiperPopular = new Swiper(".projet__swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-swiperPopular.on("slideChange", () => {
-  if (currentOpenDemo) {
-    closeDemo(currentOpenDemo);
-  }
-});
-document.getElementById("arrow").addEventListener("click", function () {
-  const nextSection = document.querySelector("#about");
-  if (nextSection) {
-    nextSection.scrollIntoView({ behavior: "smooth" });
-  }
-});
