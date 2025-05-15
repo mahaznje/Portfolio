@@ -16,7 +16,7 @@
 
 /* Donne un effet doux et fluide au body */
 body {
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background-color: var(--background);
   color: var(--text);
   transition: all 0.4s ease-in-out;
@@ -26,7 +26,7 @@ body {
 h1,
 h2,
 .logo {
-  font-family: "Dancing Script", cursive;
+  font-family: 'Dancing Script', cursive;
 }
 
 html {
@@ -165,11 +165,13 @@ a:hover {
 
 .sidebar ul li a {
   text-decoration: none;
-  font-family: "Dancing Script", cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 1.8rem;
   color: var(--text);
 }
-
+#hamburger-nav {
+  display: none;
+}
 /* Responsive */
 @media screen and (max-width: 1200px) {
   .hamburger-icon {
@@ -223,7 +225,7 @@ section:hover,
 section {
   padding-top: 3vh;
   height: auto;
-  margin: 1rem 2rem;
+  margin: 1rem;
   padding: 1rem 2rem;
   box-sizing: border-box;
   min-height: fit-content;
@@ -487,7 +489,7 @@ article {
 .close-btn {
   z-index: 1001;
   position: absolute;
-  top: 20px;
+  top: 30px;
   right: 30px;
   color: white;
   font-size: 30px;
@@ -720,13 +722,16 @@ footer p {
     margin-bottom: 6rem;
   }
   .expanded-desk.expanded {
-    width: 70vw;
-    height: 80vh;
+    width: 55vw;
+    height: 70vh;
   }
 }
 @media screen and (max-width: 1200px) {
   .contact-container {
     margin: 0.8rem auto;
     padding: 1rem 2rem;
+  }
+  #hamburger-nav {
+    display: flex;
   }
 }
