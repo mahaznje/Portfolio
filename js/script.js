@@ -1,9 +1,18 @@
 function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
+  const sidebar = document.getElementById("sidebarMenu");
+  const overlay = document.getElementById("overlay");
+  const humb = document.getElementById("hamburger-icon");
+  sidebar.classList.toggle("open");
+  overlay.classList.toggle("active");
+  humb.classList.toggle("close");
 }
+
+document.getElementById("arrow").addEventListener("click", function () {
+  const nextSection = document.querySelector("#about");
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: "smooth" });
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll(".pop-out-element");
@@ -41,6 +50,7 @@ function showDemo(expandedDesk) {
   expandedDesk.classList.add("expanded");
 
   expandedDemoVideo.style.display = "block";
+
   expandedDemoVideo.play();
   currentOpenDemo = expandedDesk;
 }
@@ -70,36 +80,37 @@ function closeDemo(expandedDesk) {
 document.querySelectorAll(".close-btn").forEach((button) => {
   button.addEventListener("click", function () {
     const projetDemo = this.closest(".expanded-desk");
-    closeDemo(projetDemo);
+    const video = projetDemo.querySelector(".expanded-demo-video");
+
+    video.pause();
+    video.currentTime = 0;
+    video.style.display = "none";
+    projetDemo.style.display = "none";
+    projetDemo.classList.remove("expanded");
+  });
+});
+document.querySelectorAll(".expanded-demo-video").forEach((video) => {
+  video.addEventListener("click", function () {
+    this.pause();
+    this.currentTime = 0;
+    this.style.display = "none";
   });
 });
 
 document.querySelectorAll(".live-demo-btn").forEach((button) => {
   button.addEventListener("click", function () {
-    const projetDemo = this.closest(".container-project-detail").querySelector(
-      ".expanded-desk"
-    );
+    const projetDemo = this.closest(".container-project-detail");
     const video = projetDemo.querySelector(".expanded-demo-video");
 
-    if (window.innerWidth <= 768) {
-      // Sur mobile, on n'affiche que la vidéo
+    if (window.innerWidth <= 468) {
+      // Cacher tout sauf la vidéo
       video.style.display = "block";
+      video.currentTime = 0;
       video.play();
-      if (video.requestFullscreen) {
-        video.requestFullscreen();
-      } else if (video.mozRequestFullScreen) {
-        // Firefox
-        video.mozRequestFullScreen();
-      } else if (video.webkitRequestFullscreen) {
-        // Chrome, Safari and Opera
-        video.webkitRequestFullscreen();
-      } else if (video.msRequestFullscreen) {
-        // IE/Edge
-        video.msRequestFullscreen();
-      }
     } else {
-      // Sur desktop, on garde le comportement actuel
-      showDemo(projetDemo);
+      // Desktop → comportement habituel
+      const expandedDesk = projetDemo.querySelector(".expanded-desk");
+      showDemo(expandedDesk);
     }
   });
 });
@@ -126,4 +137,10 @@ const swiperPopular = new Swiper(".projet__swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+swiperPopular.on("slideChange", () => {
+  if (currentOpenDemo) {
+    closeDemo(currentOpenDemo);
+  }
 });
