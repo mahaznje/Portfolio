@@ -656,6 +656,7 @@ footer p {
     max-width: 260px;
     margin-left: -0.5rem;
     padding: 0.2rem;
+    height: auto;
   }
 }
 
