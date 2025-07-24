@@ -442,7 +442,6 @@ article {
   row-gap: 2rem;
   padding-bottom: 2rem;
   overflow: hidden;
-  justify-items: center;
 }
 .projet__swiper {
   position: relative;
